@@ -1,0 +1,70 @@
+@use "variables";
+
+.desktop-table {
+  margin: 0.5em;
+  gap: 0.5em;
+  border-collapse: collapse;
+  width: 99%;
+  tr {
+    th {
+      border: 1px solid variables.$bg-color-third;
+      padding: 5px;
+      text-align: center;
+      color: lightgreen;
+    }
+  }
+
+  tr {
+    td {
+      border: 1px solid variables.$bg-color-secundary;
+      padding: 5px;
+      color: #fff;
+    }
+    td:hover {
+      background: transparent;
+      text-align: center;
+      font-size: 18px;
+      border-bottom: 1px solid #fff;
+    }
+  }
+}
+
+.mobile-table {
+  display: none;
+  width: 100%;
+  .row {
+    .column {
+      .header {
+        background: variables.$bg-color-secundary;
+        color: lightgreen;
+        font-weight: bold;
+      }
+      .contenido:hover {
+        background: transparent;
+        opacity: 0.5;
+        border-bottom: 1px solid #fff;
+      }
+      .header,
+      .contenido {
+        border: 1px solid variables.$bg-color-third;
+        border-bottom: none;
+        padding: 10px;
+      }
+      .contenido {
+        text-align: center;
+
+        color: variables.$text-color;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-table {
+    display: block;
+  }
+
+  .desktop-table {
+    display: none;
+  }
+}

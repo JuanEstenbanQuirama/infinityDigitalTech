@@ -1,0 +1,46 @@
+@use 'modal';
+@use 'table';
+@use 'variables';
+
+.body, * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: variables.$bg-color;
+  }
+
+h1 {
+    margin: .5em;
+    border-radius: 10px;
+    padding: 1em;
+    text-align: center;
+    align-items: center;
+    background-color: variables.$bg-color-secundary;
+    color: variables.$text-color;
+}
+
+select, button, label{
+    color: variables.$text-color;
+}
+// eliminar filtros
+#btn-clear{
+    background: variables.$bg-color-modal;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+}
+#btn-clear:hover{
+    background: variables.$bg-color-hover;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+}
+
+.container-btn-clear{
+    display: flex;
+    justify-content: flex-end;
+}
+
